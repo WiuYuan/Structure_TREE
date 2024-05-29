@@ -1,0 +1,2 @@
+join -1 1 -2 1 example_sorted.bed example_lengths.txt 将文件一遍循环看第一列words相同进行匹配
+join -1 1 -2 1 -a 1 example_sorted.bed example_lengths_alt.txt 保留第一个文件中无法匹配的

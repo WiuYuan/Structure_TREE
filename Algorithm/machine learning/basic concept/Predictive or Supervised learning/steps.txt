@@ -1,0 +1,7 @@
+1. decide the model: h_T
+	1. which learning method? supervised?
+	2. how to decide h_T
+2. test the above model
+	1. split the data set
+	2. from the each test set calculate the error
+	3. get the total error

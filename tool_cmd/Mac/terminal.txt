@@ -1,0 +1,36 @@
+mkdir folder_name #create new folder
+-f=follow, -l=list -t=time -r=reverse
+
+man ls #manual q: quit
+
+ls file_name/ #get all sublog
+
+ls -l #more information 
+
+rm -rf folder_name #remove the folder
+
+touch file_name #update the modification of a file or creates a file if it doses't exist
+
+mkdir -p file_name/{filename1,filename2} #create the same directory files
+
+touch seqs/zmays{A,B,C}_R{1,2}.fastq #the same as before
+
+ls seqs/zmaysB* #all file like zmaysBxxx.xxx
+
+ls seqs/zmaysB*fastq or zmaysB_R?.fastq #? for a single c
+
+ls zmays[ABC]_R1.fastq or ls zmays[A-C]_R1.fastq #the same as before
+
+echo $0 #find version of terminal
+
+cat tb1-protein.fasta tga1-protein.fasta #show standard out
+
+cat tb1-protein.fasta tga1-protein.fasta > zea-proteins.fasta #to some file
+
+ls -lrt
+
+ls -l tb1.fasta leafy1.fasta
+
+ls -l tb1.fasta leafy1.fasta > listing.txt 2> listing.stderr #2> is the error stream
+
+program1 2>&1 | grep "error" # 2>&1 redirects standard error to the standard output stream

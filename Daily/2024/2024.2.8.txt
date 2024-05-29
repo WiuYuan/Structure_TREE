@@ -1,0 +1,6 @@
+11:00-11:30 bioinformatics 
+14:00-15:00 bioinformatics
+15:00-16:00 statistical physics
+16:00-17:00 biochemistry 
+17:00-17:30 English
+22:30-0:30 bioinformatics remark: 半封印下可以激活代码域，崩溃下别想

@@ -1,0 +1,13 @@
+mtfs$pos <- paste(mtfs$chr, mtfs$motif_start, sep="-") 第一个数组每一项+‘-’+第二个数组对应项
+
+recm <- merge(mtfs, rpts, by.x="pos", by.y="pos") 
+合并by.x和by.y的match项（从mtfs的每一项加上rpts的match项，相同列名chr->chr.{xy}，并且按pos排序
+
+recm <- merge(mtfs, rpts, by.x="pos", by.y="pos", all.x=TRUE) 所有无法与rpts匹配的用NA代替
+
+rbind(dpth_summ[[1]], dpth_summ[[2]]) 将两个name相同的vector结合，name继承rowname
+如果是数据框的话行名为list name.原行数
+cbind(dpth_summ[[1]], dpth_summ[[2]]) 同上，但name继承colname
+
+do.call(rbind, lapply(split(d$depth, d$GC.binned), summary)) 可以直接结合多个，行名为list name.原行数
+do.call(rnorm, list(n=4, mean=3.3, sd=4)) 这等于rnorm(n=4, mean=3.3, sd=4)

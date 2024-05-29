@@ -1,0 +1,18 @@
+绿色的"PASS"
+黄色的"WARN"
+红色的"FAIL"
+
+Basic statistics是该fastq一些基本信息:
+
+Filename:文件名
+File type: 文件类型
+Encoding：测序平台的版本和相应的编码版本号，用于计算Phred反推error P时用
+Total Sequences: 输入文本的reads的数量
+Sequence length: 测序长度
+%GC: GC含量，表示整体序列的GC含量，由于二代测序GC偏好性高，且深度越高，GC含量会越高。
+
+
+2.Per base sequence quality
+横轴为read长度，纵轴为质量得分，Q-score = -10✖lg（error P）
+柱状表示该位置所有序列的测序质量的统计，柱状（黄色）是25%~75%区间质量分布，error bar（触须）是10%~90%区间质量分布，蓝线表示平均数，红色为中位数。
+一般要求所有位置的10%小于20，即最多允许该位置10%的序列低于Q20，即90%的序列的碱基质量都大于Q20，即90%的序列碱基错误率不超过99%。当任何碱基质量低于10，或者任何中位数低于25时报WARN,需注意；当任何碱基质量低于5或者任何中位数低于20报FAIL。

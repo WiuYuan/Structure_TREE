@@ -1,0 +1,5 @@
+head Mus_musculus.GRCm38.75_chr1.bed
+head -n 3 Mus_musculus.GRCm38.75_chr1.bed 查看前3行
+(head -n 2; tail -n 2) < Mus_musculus.GRCm38.75_chr1.bed 同时查看前后两行
+cut -f 2 Mus_musculus.GRCm38.75_chr1.bed | head -n 3 无需xargs
+注意如果head输入太长会报错，而tail不会

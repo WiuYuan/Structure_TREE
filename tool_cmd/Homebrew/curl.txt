@@ -1,0 +1,1 @@
+curl http://hgdownload.soe.ucsc.edu/goldenPath/hg19/chromosomes/chr22.fa.gz > 1.fa.gz

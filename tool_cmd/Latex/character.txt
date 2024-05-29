@@ -1,0 +1,18 @@
+\in 属于
+\notin 不属于
+\mathbb{R} 实数集
+\nabla ∇
+\partial ∂
+
+https://blog.csdn.net/yen_csdn/article/details/79966985
+
+\hfill #右对齐
+
+\rm x 在数学公式中将x变为正体
+
+\vec{xy} 向量箭头(注意下标放外面) \boldsymbol{xy} 加粗表示向量
+
+\_: 可以在文本中写出_符号
+
+\par
+~~~~~~~~~~~~~~~Parasite Load Change Over Time (one random case)\\可以使文本居中

@@ -1,0 +1,43 @@
+# first ^ is start with >, -v is instead of ..., second ^ is instead of ATCG
+grep -v "^>" tb1.fasta | \
+grep --color -i "[^ATCG]"
+
+# program1’s standard output is both written to intermediate-file.txt and piped directly into program2’s standard input.
+program1 input.txt | tee intermediate-file.txt | program2 > results.txt
+
+# run it in background, output process ID (PID)
+program1 input.txt > results.txt &
+
+#check running program
+jobs
+
+$ program1 input.txt > results.txt # forgot to append ampersand 
+$ # enter control-z
+[1]+ Stopped program1 input.txt > results.txt 
+$ bg
+[1]+ program1 input.txt > results.txt
+
+Control-C #killing the process
+Control-Z #suspend it
+
+# get the process successfully? 0 is right, other is error
+# echo: get the last value
+echo $?
+
+# && and ||
+$ true && echo "first command was a success" first command was a success
+$ true || echo "first command was not a success" $ false || echo "first command was not a success" first command was not a success
+$ false && echo "first command was a success"
+
+# command substitution
+echo "There are $(grep -c '^>' input.fasta) entries in my FASTA file."
+
+# date using
+mkdir results-$(date +%F)
+
+# lazy method
+alias today="date +%F"
+mkdir results-$(today)
+
+#generate secret shell key 2048 bits
+ssh-keygen -b 2048

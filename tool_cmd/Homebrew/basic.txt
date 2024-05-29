@@ -1,0 +1,7 @@
+location: \opt\Homebrew
+
+brew install --cask zoom
+
+brew uninstall zoom
+
+brew install --cask google-chrome

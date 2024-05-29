@@ -1,0 +1,2 @@
+:%s/character/symbol/g 所有character替换为symbol
+:s/character/symbol/g 所有character替换为symbol, 但是要在visual mode

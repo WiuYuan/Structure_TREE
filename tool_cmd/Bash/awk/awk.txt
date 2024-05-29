@@ -1,0 +1,7 @@
+awk '{ print $0 }' example.bed 模拟cat
+awk '{ print $2 "\t" $3 }' example.bed 输出第二第三列
+awk '$3 - $2 > 18' example.bed 输出大于18的列的行的所有字符
+awk '$1 ~ /chr1/ && $3 - $2 > 10' example.bed 输出第一列为chr1且3-2>10的所有行
+awk '$1 ~ /chr2|chr3/ { print $0 "\t" $3 - $2 }' example.bed 输出多一列
+awk 'BEGIN{ s = 0 }; { s += ($3-$2) }; END{ print "mean: " s/NR };' example.bed
+awk 'NR >= 3 && NR <= 5' example.bed

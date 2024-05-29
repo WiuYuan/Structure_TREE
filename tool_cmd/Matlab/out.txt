@@ -1,0 +1,3 @@
+fid = fopen('data.txt', 'w');
+fprintf(fid, "%f\n", x);
+fclose(fid);

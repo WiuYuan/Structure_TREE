@@ -1,0 +1,8 @@
+10:00-11:00 ele
+11:00-12:00 quantum
+13:00-14:00 landscape
+14:00-15:00 ele
+15:00-16:00 quantum
+16:00-17:00 landscape
+19:00-21:00 english
+remark:tired

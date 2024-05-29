@@ -1,0 +1,2 @@
+gauss : 2*n^3/3
+cholesky : n^3/3

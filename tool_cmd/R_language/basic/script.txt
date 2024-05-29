@@ -1,0 +1,10 @@
+Rscript --vanilla my_analysis.R 在命令行中运行脚本
+
+source("my_analysis.R") 在R中运行脚本
+
+## args.R -- a simple script to show command line args
+args <- commandArgs(TRUE)
+print(args)
+
+$ Rscript --vanilla args.R arg1 arg2 arg3
+[1] "arg1" "arg2" "arg3"

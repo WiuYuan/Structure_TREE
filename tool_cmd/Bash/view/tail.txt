@@ -1,0 +1,2 @@
+tail -n 3 Mus_musculus.GRCm38.75_chr1.bed 查看后3行
+tail -n +2 nums.txt 从第二行到最后一行

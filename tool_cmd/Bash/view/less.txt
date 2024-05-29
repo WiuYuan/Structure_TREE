@@ -1,0 +1,1 @@
+less contaminated.fastq 进入需要按q才能退出的浏览页面

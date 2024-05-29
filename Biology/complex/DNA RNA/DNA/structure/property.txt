@@ -1,0 +1,3 @@
+right hand
+bp : base pair
+Base Stacking : The bases are flat, relatively water-insoluble molecules, and they tend to stack above each other roughly perpendicular to the direction of the helical axis. Electron cloud interactions (p–p) between bases in the helical stacks contribute significantly to the stability of the double helix. The stacked bases are attracted to each other by transient, induced dipoles between the electron clouds, a phenomenon known as van der Waals interactions.

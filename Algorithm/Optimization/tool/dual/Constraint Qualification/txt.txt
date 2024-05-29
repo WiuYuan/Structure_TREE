@@ -1,0 +1,3 @@
+if one of these condition is true, then the strong dual principle valid, that is, dual problem maximum equal
+
+KKT : Karush-Kuhn-Tucker

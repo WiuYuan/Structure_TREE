@@ -1,0 +1,7 @@
+cut自动分隔符是Tab，改成空格需要-d" "
+
+grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f1,4,5 | head -n 3 可以1,4,5
+
+cut -d, -f2,3 Mus_musculus.GRCm38.75_chr1_bed.csv | head -n 3 分隔符采用逗号，在csv文件中使用
+
+cut -f 1-8 从1到8列

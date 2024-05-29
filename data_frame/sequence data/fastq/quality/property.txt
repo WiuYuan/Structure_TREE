@@ -1,0 +1,7 @@
+sanger : P = 10^(-(q-33)/10)
+P : 正确率
+q : 质量 R语言用ord(b)
+
+Illumina (version 1.3 to 1.7) : P = 10^(-(q-64)/10)
+
+Solexa : Q = 1/(10^(P/10)+1)

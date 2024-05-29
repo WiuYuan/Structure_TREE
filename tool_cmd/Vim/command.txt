@@ -1,0 +1,8 @@
+. 重复上一个command
+:reg 查看以register
+”7p 复制reg第7行内容
+"7yy 复制整行到reg第7行
+"0p 粘贴上一个yank的, 而不是d的
+"+ 是system clipboard的
+qa + command + q 存储命令
+@a 执行命令

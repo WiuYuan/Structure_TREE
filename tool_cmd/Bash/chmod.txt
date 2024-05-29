@@ -1,0 +1,3 @@
+chmod +x findst 给文件加上可执行权限, 从而之后可以使用findst $1 $2来执行命令
+chmod u+x findst 这种方法需要使用./findst才行
+注意放入路径文件夹中

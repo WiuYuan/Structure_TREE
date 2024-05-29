@@ -1,0 +1,12 @@
+例子:
+
+欢迎: 生物信息学实验 王子烨 2200012193 使用本系统！
+昵称: bioinfo_1_50 您将使用登陆节点 c06b04n08 登陆；进入文件路径：cd ~/
+bjx050_pkuhpc 的账号密钥登陆：
+登陆方法：复制下面密钥生成无格式文件yy.txt
+chmod 600 ~/Downloads/tmp/yy.txt
+ssh -i ~/Downloads/tmp/yy.txt -p 16822 bjx050_pkuhpc@162.105.160.16
+ssh -i ~/Downloads/tmp/yy.txt -p 26822 bjx050_pkuhpc@222.128.0.254 #校外
+复制的时候从-----BEGIN... 复制到-----END.... 小短线-也需要复制,粘贴为无格式粘贴
+bjx050_pkuhpc 的私钥是(for xshell and mac 密码是pphpc)：
+Remark: Desktop文件夹可能有读取的问题, 尽量在yuanwen文件夹下操作

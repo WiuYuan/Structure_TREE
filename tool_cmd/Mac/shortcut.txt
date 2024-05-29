@@ -1,0 +1,15 @@
+cmd+control+. #show hidden folder 
+
+cmd+shift+. #show hidden file
+
+cmd+option+p #show hidden path
+
+cmd+shift+4 #截图保存在剪切板
+
+cmd+delete #remove file
+
+cmd+M #minimize window
+
+cmd+option+F #maximize window
+
+cmd+option+V #nearly ctrl X

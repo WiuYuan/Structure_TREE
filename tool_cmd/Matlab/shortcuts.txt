@@ -1,0 +1,10 @@
+mac
+
+command+/ 注释
+command+option+/ 取消注释
+
+cmd+鼠标放大 可以放大编辑界面
+
+shift+enter 改变所有变量名
+
+vscode 中 opt+shift+f 自动格式化代码

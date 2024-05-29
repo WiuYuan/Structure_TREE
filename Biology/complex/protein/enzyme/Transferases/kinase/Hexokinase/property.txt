@@ -1,0 +1,2 @@
+Glucose + ATP ->(Mg2+)()-> Glucose 6-phosphate + ADP
+The human genome encodes four different hexokinases (I to IV), all of which catalyze the same reaction.

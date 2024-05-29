@@ -1,0 +1,3 @@
+git diff dafce75 比较与历史版本的区别
+
+git diff --staged 比较与上一次版本的区别

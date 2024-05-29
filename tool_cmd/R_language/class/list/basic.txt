@@ -1,0 +1,13 @@
+adh <- list(chr="2L", start=14615555L, end=14618902L, name="Adh") 创建
+
+adh[1:2] 索引，返回list
+
+str(adh) 检查数据结构，比如list中套个list
+
+is.list(adh[1]) 判断是否是list，这里TRUE
+
+adh[[2]] adh[['start']] adh$chr 返回元素
+
+adh$id <- NULL 删除id
+
+unlist(lapply(d_split, mean)) 将简单的list化作vector

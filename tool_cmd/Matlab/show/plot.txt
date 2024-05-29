@@ -1,0 +1,26 @@
+figure;
+hold on
+plot(Nset, diff);
+title("diff");
+xlabel("N");
+ylabel("diff");
+hold off
+
+
+xx = [x, x, x+d, x+d];
+yy = [y, y+d, y+d, y];
+fill(xx, yy, 'black');
+
+axis off 关闭坐标轴
+axis equal 使坐标轴相等
+
+ylabel("$\frac{1}{e_N}$", ...
+    'interpreter', 'latex', ...
+    "Rotation",0); 可以旋转坐标轴+使用latex编辑
+
+rectangle('Position', [x(i)-s/2, y(i)-s/2, s, s], 'Curvature', [1, 1]); 画直径为s的圆
+rectangle('Position', [0, 0, L, L]); 画原点+长宽LL的长方形
+
+plot(1:N, log(m), 'Color', 'blue') 加颜色，用'-o'和'-s'加标记
+
+line([x1, y1], [x2, y2]) 可以加直线

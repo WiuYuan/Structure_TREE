@@ -1,0 +1,2 @@
+list.files("hotspots", pattern="hotspots.*\\.bed") 输出所有hotspots文件夹下文件名，组合为list
+list.files("hotspots", pattern="hotspots.*\\.bed", full.names=TRUE) 包含路径（指getwd()下路径）

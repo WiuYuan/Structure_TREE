@@ -1,0 +1,12 @@
+#basic
+coln = data[1, ]
+coln = coln[, -1]
+rown = data[, 1]
+rown = rown[-1, ]
+data = data[-1, ]
+data = data[, -1]
+mat = as.matrix(data)
+mat = type.convert(mat)
+colnames(mat) = coln
+rownames(mat) = as.matrix(rown)
+pheatmap(mat, show_rownames = TRUE)

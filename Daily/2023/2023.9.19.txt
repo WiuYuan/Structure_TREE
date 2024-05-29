@@ -1,0 +1,9 @@
+8:00-10:00 biochemistry
+10:00-12:00 statistical process
+13:00-14:00 修电脑
+14:00-15:00 numerical algebra homework
+15:00-16:00 biochemistry foundation
+16:00-17:00 R setting
+18:00-18:30 numerical algebra homework
+18:40-20:00 physiology
+20:00-20:30 landscape

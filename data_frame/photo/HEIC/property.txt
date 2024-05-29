@@ -1,0 +1,5 @@
+The .HEIC file type is a high efficiency file compression container. It is especially useful on mobile devices where space is at a premium, which is why Apple uses it on the iPhone. None of the TeX engines can deal with this type directly, so you need to convert the files to JPG or some other format that they can deal with.
+
+On the iPhone, you can set Camera Preferences -> Transfer to Mac or PC -> Automatic and it should upload photos in JPG not HEIC. For existing photos if you have a Mac you can open them with Preview and export them as JPG. For other OSes I'm sure there are converters available.
+
+Preview->file->Export...

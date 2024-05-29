@@ -1,0 +1,5 @@
+samtools view -H celegans.sam 查看head前9行，最后加一行此次命令
+samtools view -H celegans.bam
+samtools view -b celegans.sam > celegans_copy.bam
+samtools view celegans.bam > celegans_copy.sam 无Header
+samtools view -h celegans.bam > celegans_copy.sam 有Header，可以转回来

@@ -1,0 +1,4 @@
+basename seqs/zmaysA_R1.fastq 只输出name无路径
+
+basename seqs/zmaysA_R1.fastq .fastq
+basename -s .fastq seqs/zmaysA_R1.fastq 去掉.fastq

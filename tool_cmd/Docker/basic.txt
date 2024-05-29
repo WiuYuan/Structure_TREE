@@ -1,0 +1,17 @@
+https://github.com/RamiKrispin/vscode-r 核心学习网站
+
+run -dit --name test2 pegi3s/r_deseq2:latest可以创建一个container, 但是不能直接create(可能是版本不兼容, 快速做跳过报错)
+
+docker attach container 链接上docker container
+exit
+
+docker ps -a 查看现在container status
+
+apt-get update
+apt-get install python3-pip 安装pip(pip3)
+
+pip3 install radian 安装radian
+
+docker build . -f /Users/yuanwen/Desktop/testR/.devcontainer/Dockerfile -t pegi3s/r_deseq2:latest 使用dockerfile
+
+docker rm test2 删除容器

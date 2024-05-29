@@ -1,0 +1,15 @@
+\begin{align*}
+* &= * \\
+  &= * \\
+  &= *
+\end{align*}
+
+\begin{equation}
+\label{eq6}
+\left\{
+\begin{aligned}
+* &= *\\
+* &= *
+\end{aligned}
+\right.
+\end{equation}

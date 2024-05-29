@@ -1,0 +1,37 @@
+/#basic
+ggplot(fig1a) +
+  geom_line(aes(day, y1)) + 
+  geom_line(aes(day, y2)) + 
+  geom_line(aes(day, y3)) + 
+  geom_point(aes(day, y1), shape = 1, colour = "blue", size = 3) + 
+  geom_point(aes(day, y2), shape = 1, colour = "red", size = 3) + 
+  geom_point(aes(day, y3), shape = 1, colour = "green", size = 3) +
+  labs(y = "Relative growth")
+
+ggplot(d) + geom_point(aes(x=position, y=diversity))
+
+ggplot(d) + geom_density(aes(x=diversity), fill="black")
+
+ggplot(d) + geom_density(aes(x=diversity, fill=cent), alpha=0.4)
+
+ggplot(d, aes(x=depth, y=total.SNPs)) + geom_point() + geom_smooth()
+
+#para
+alpha : the transparency level 
+
+ggplot(d) + geom_bar(aes(x=GC.binned)) 对factor画柱状图, 注意如果fill可以分类加不同颜色
+ggplot(d) + geom_bar(aes(x=percent.GC)) 可以自动的bin data然后按照factor画图
+ggplot(d) + geom_density(aes(x=depth, linetype=GC.binned), alpha=0.5) 
+对binned的factor分类，然后根据不同的类画depth的光滑化密度图
+
+ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1) +  geom_smooth(aes(color=motif), method="loess", se=FALSE, span=1/10) 分类画smooth
+
+p <- ggplot(mtfs, aes(x=dist, y=recom)) + geom_point(size=1, color="grey")p <- p + geom_smooth(method='loess', se=FALSE, span=1/10)p <- p + facet_wrap(~ motif)print(p) 同上，但是输出两张图
+
+p <- p + facet_wrap( ~ motif, scales="free_y") 可以使得两图y轴不同大小
+
+p <- p + facet_grid(repeat_name ~ motif) 用这个的两个变量可以输出3*2
+
++xlab("this") 可以改变x轴
+
+geom_boxplot() : 箱形图

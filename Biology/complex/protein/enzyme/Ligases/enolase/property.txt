@@ -1,0 +1,2 @@
+2-Phosphoglycerate ->()-> H2O + Phopsphoenolpyruvate(CH2=COPO3(2-)-COO(-))
+using two Mg2+ as cofactor

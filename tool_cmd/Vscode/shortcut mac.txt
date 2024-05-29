@@ -1,0 +1,4 @@
+shift Tab #向前缩进
+左下角可以设置
+cmd + shift + c 打开外部终端
+control + 3 切换到第3个标签页

@@ -1,0 +1,1 @@
+file file_name 查看编码方式比如ASCII,UTF-8

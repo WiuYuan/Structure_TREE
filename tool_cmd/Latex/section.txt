@@ -1,0 +1,7 @@
+\renewcommand\thesubsection{*}
+（1）阿拉伯数字 ：arabic ；
+（2）小写的罗马数字： roman ；
+（3）大写的罗马数字：Roman ；
+（4） 小写字母：alph ；
+（5）大写字母：Alph ；
+（6）空白：不用填东西

@@ -1,0 +1,3 @@
+The description line begins with a greater than symbol (>) and contains the sequence identifier and other (optional) information. The sequence data begins on the next line after the description, and continues until there’s another description line (a line beginning with >) or the file ends. 
+
+A common naming convention is to split the description line into two parts at the first space: the identifier and the comment, like >gene_00284728 length=231;type=dna

@@ -1,0 +1,1 @@
+grep "ab" a.txt > /dev/null 找到所有包含ab的行然后集中输出

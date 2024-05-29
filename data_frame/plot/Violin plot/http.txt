@@ -1,0 +1,4 @@
+https://en.wikipedia.org/wiki/Violin_plot
+
+p.d gragh && box plot (1,3 quartile and median)
+kernel to smooth

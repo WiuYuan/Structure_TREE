@@ -1,0 +1,9 @@
+8:00-10:00 optimization
+10:00-12:00 machine learning
+13:00-14:00 biochemistry
+14:00-15:00 phisiology
+15:00-17:00 applied statistical process
+18:00-19:00 statistical physics
+19:00-20:00 landscape
+20:10-21:10 biochemistry
+remark: 今天还行，以后主要注意两件事，1是边缘效应，2是规划理论

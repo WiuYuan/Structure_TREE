@@ -1,0 +1,10 @@
+write.table(mtfs, file="hotspot_motifs.txt", quote=FALSE, sep="\t", row.names=FALSE, col.names=TRUE) 输出数据框
+
+By default, write.table() quotes factor and character columns and includes rownames
+seq是分割符，这里用tab
+
+hs_gzf <- gzfile("hotspot_motifs.txt.gz")write.table(mtfs, file=hs_gzf, quote=FALSE, sep="\t", row.names=FALSE,col.names=TRUE)
+用gzfile()链接一个gz文件，然后写入
+
+save(tmp, file="example.Rdata") R语言对文件编码保存，即为serialization
+load("example.Rdata") 重新读取

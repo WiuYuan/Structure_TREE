@@ -1,0 +1,6 @@
+d = read.csv("Dataset_S1.txt") # first line contain column name
+d = read.csv("GSM2098550_scrbseq_48h.txt", sep = "\t")
+
+bd <- read.delim("noheader.bed", header=FALSE, col.names=c("chrom", "start", "end"))
+
+reps <- read.delim("chrX_rmsk.txt.gz", header=TRUE) 可以不解压读取

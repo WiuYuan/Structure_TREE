@@ -1,0 +1,3 @@
+Vesicle has 2 Ca2+ cole protein, the first has 2 Ca2+ binding-sites, the second has 3, hill constant is 5
+neurotransmitter transport into vesicle couple with H+ transport
+SNARE synapto-brevin (a v-SNARE, vesicle) and syntaxin and SNAP-25 (both are t-SNARES, target presynaptic plasma membrane)

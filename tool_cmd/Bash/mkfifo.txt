@@ -1,0 +1,5 @@
+mkfifo fqin
+ls -l fqin #prw-r--r-- 1 vinceb staff 0 Aug 5 22:50 fqin
+echo "hello, named pipes" > fqin &
+cat fqin
+rm fqin

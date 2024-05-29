@@ -1,0 +1,4 @@
+i() { (head -n 2; tail -n 2) < "$1" | column -t}
+i Mus_musculus.GRCm38.75_chr1.bed
+和下行等价
+(head -n 2; tail -n 2) < Mus_musculus.GRCm38.75_chr1.bed

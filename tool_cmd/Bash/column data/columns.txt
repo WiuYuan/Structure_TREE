@@ -1,0 +1,4 @@
+grep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf | cut -f 1-8 | column -t | head -n 3
+整齐排列，注意head要在最后
+
+column -s"," -t Mus_musculus.GRCm38.75_chr1_bed.csv | head -n 3 使用,分割符，对于每一行数据分割

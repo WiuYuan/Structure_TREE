@@ -1,0 +1,3 @@
+:set number 显示行号
+:set relativenumber 显示相对行号
+h 向左 j 向上 k 向下 l向右

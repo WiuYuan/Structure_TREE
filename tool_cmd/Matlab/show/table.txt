@@ -1,0 +1,3 @@
+T = table(Nset, t, err, stp, ...
+    'VariableNames',Names)
+Nset = [64; 128; 256]; 创建table

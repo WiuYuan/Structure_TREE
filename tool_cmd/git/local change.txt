@@ -1,0 +1,8 @@
+git stash 保存自上次更改后的所有更改
+git stash pop 使上行cmd失效
+
+git commit --amend 修改上次commit message
+
+git mv data/README data/README.md 移动 删除可以用rm
+
+git add .gitignore 加入忽略文件，比如data/seqs/*.fastq

@@ -1,0 +1,15 @@
+nchar(c("AGCTAG", "ATA", "GATCTGAG", "")) 查看字符数量
+grep("CAG", re_sites) 匹配哪里出现过，返回出现的字符所在数组索引
+grep("CT[CG]", re_sites) 使用POSIX extended regular expressions
+grep("[^\\d]6", chrs, perl=TRUE) 使用Perl Compatible Regular Expressions
+regexpr("[^\\d]6", chrs, perl=TRUE) 返回每个字符匹配位置（注意从1开始，[]算匹配成功的第一个字符，失败输出-1）
+
+pos <- regexpr("\\d+", chrs, perl=TRUE) 匹配所有最靠前的连续数字
+substr(chrs, pos, pos + attributes(pos)$match.length) 输出这些数字组成的字符数组
+
+sub(pattern="Watson", replacement="Watson, Franklin,", x="Watson and Crick discovered DNA's structure.") 代替最靠前的匹配字符，可以省略pattern replacement x，x可以用数组
+sub("gene=(\\w+)", "\\1", "gene=LEAFY", perl=TRUE) 可以用\\1指代
+
+paste("chr", c(1:22, "X", "Y"), sep="") 前一项+seq+后一项
+
+strsplit(chunks, ";;") 将chunks字符串按照;;分裂成字符串list，名称为[[1]]

@@ -1,0 +1,4 @@
+catalyze ATP to ADP + Pi
+also named for reverse reaction
+requires Mg2+ for its activity, because the true substrate of the enzyme is not ATP4− but the MgATP2− complex
+加入底物后反应中心裂缝关闭，才具有活性

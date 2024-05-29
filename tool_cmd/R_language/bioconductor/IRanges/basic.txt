@@ -1,0 +1,9 @@
+rng <- IRanges(start=4, end=13)
+IRanges(start=4, width=3)
+IRanges(end=5, width=5)
+x <- IRanges(start=c(4, 7, 2, 20), end=c(13, 7, 5, 23))
+names(x) <- letters[1:4]
+start(x) end(x) width(x) range(x)
+c(a, b) # range a,b
+restrict(y, 5, 10)
+x + 4 #start-4;end+4

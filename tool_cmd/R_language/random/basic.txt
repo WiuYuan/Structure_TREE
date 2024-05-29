@@ -1,0 +1,6 @@
+set.seed(0)
+
+sample(1:50, 30, replace=FALSE) #此时不可重复
+sample(length(z), replace=TRUE) #可重复
+
+rnorm(2, 0, 1) 返回2项数组，gauss(0,1)

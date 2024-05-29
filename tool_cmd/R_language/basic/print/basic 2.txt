@@ -1,0 +1,9 @@
+print(sqrt(3.5), digits=10)
+
+getOption('digits') 得到当前自动输出的小数位数，一般为7
+
+options(digits=9)
+
+round(sqrt(3.5), digits=3)
+round(sqrt(3.5))
+round(sqrt(3.5), 3)

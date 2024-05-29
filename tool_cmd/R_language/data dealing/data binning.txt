@@ -1,0 +1,5 @@
+cut() divides the data into that number of equally sized bins, return factor
+
+d$GC.binned <- cut(d$percent.GC, 5)
+
+cut(d$percent.GC, c(0, 25, 50, 75, 100))

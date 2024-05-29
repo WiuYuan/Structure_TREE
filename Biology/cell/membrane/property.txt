@@ -1,0 +1,7 @@
+phospholipids:
+phosphatidylcholine            outer leaflet
+sphingomyeline                 outer leaflet
+phosphatidylethanolamine       inner leaflet
+phosphatidylserine             inner leaflet
+phosphatidylinositol*          inner leaflet
+*involved in signal transduction

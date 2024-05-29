@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{ctex}
+\usepackage{listings}
+\usepackage{hyperref}
+\lstset{
+frame=single
+}
+\hypersetup{colorlinks = true,
+	    linkcolor = black,
+	    urlcolor = blue,
+            citecolor = blue}
+\title{标题}
+\date{苑闻 2200010833}
+\begin{document}
+\maketitle
+
+\end{document}

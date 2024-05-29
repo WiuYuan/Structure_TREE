@@ -1,0 +1,31 @@
+repmat(a, m, n) 扩增向量a m行 n列
+
+perms(v) 可以得到所有v的排列，比如v = [1, 2, 3]; 则得到6*3矩阵
+
+reshape(x, n, m) #将矩阵重新排列
+
+tril(A), triu(A) tril(A, k) #取上三角
+
+shift+Tab整体左移
+
+round四舍五入 fix保留整数部分 floor向下取整 ceil向上取整 sign提取符号 rem取余数 mod取模数
+
+isempty(opts) 判断opts=[]
+
+tri_node = @(p1)triples1ooo(p1, optt(i)); 函数传入
+
+fileds = fieldnames(opt1); 遍历结构体
+for i = 1: length(fileds)
+    k = fileds(i);
+    key = k{1};
+    opt_value.(key) = t*opt1.(key) + (1-t)*opt2.(key);
+end
+
+doc 查看文档
+
+注意函数内部的更改一般不会改变函数外
+
+tic;
+t = toc
+
+cell = {'red','blue'}可以用cell{1}检索内部内容，而不是返回cell

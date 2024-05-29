@@ -1,0 +1,31 @@
+brew install git
+
+git config --global core.excludesfile ~/.gitignore_global
+
+git config --global user.name "Sewall Wright"
+
+git config --global user.email "swright@adaptivelandscape.org"
+
+git config --global color.ui true #use terminal color visually change
+
+git init
+
+git clone https://github.com/lh3/seqtk.git
+
+git status
+
+git add README data/README
+
+git commit -m "initial import"
+
+git config --global core.editor emacs #change the default commit messages (vim default)
+
+git log
+git log -n 2
+
+git commit -a -m "added information about project to README" # only for modification
+上面可以改成-am
+
+git reset HEAD README.md 清除还未commit只是add的file
+
+git checkout -- README.md 可以返回原文件状态

@@ -1,0 +1,5 @@
+所有语言在VSCode中均需要装Extension然后才有比如编译器等其他
+
+extension中有设置，setting,json, 注意编写的时候要结尾要加","
+
+可以自定义命令

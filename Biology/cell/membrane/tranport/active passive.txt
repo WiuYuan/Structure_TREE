@@ -1,0 +1,5 @@
+passive transport: the net movement of a molecule across a membrane occurs in the direction predicted by the electrochemical gradient
+
+primary active transport: the transport is directly coupled to the hydrolysis of ATP
+
+secondary active transport: Solute carriers that couple movement of two or more molecules often transport one or more molecules against their respective electrochemical gradient through the use of the energy in the electrochemical gradient of the other molecule or molecules 

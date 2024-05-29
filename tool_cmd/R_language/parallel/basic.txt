@@ -1,0 +1,5 @@
+library(parallel)
+results <- mclapply(my_samples, slowFunction)
+
+options(cores=3) 指定并行数量
+getOption('cores') 查看并行数量

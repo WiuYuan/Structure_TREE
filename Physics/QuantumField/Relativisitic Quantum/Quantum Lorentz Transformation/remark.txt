@@ -1,0 +1,1 @@
+when consider Lorentz transformation deduce to unitary operator in physics space, we always set the spin freedom unchanged

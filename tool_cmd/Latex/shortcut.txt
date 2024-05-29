@@ -1,0 +1,5 @@
+cmd+T 注释
+
+cmd+shift+M 进入行数学格式
+
+cmd+option+V vscode latexshop快速打开pdf

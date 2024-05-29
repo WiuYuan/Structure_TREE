@@ -1,0 +1,11 @@
+meanRemoveNA <- function(x) mean(x, na.rm=TRUE) 写函数
+
+fun_name <- function(args) { 写函数，注意内部变量的更改不会影响外部
+# body, containing R expressions 
+return(value) 可以直接写value
+}
+
+browser() 函数内部调试，输入c退出
+
+options(error=recover) 可以找到出现问题的函数
+options(error=NULL) 可以调回去

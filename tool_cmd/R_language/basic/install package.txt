@@ -1,0 +1,10 @@
+install.packages(c('readr', 'ggplot2', 'tidyr'))
+
+BiocManager::install("GenomicRanges")
+
+install.packages('~/desktop/a.tar.gz', repos=NULL, type='source')
+
+如果想对R包的源代码操作，先解压，再然后直接对文件夹做install,不能压缩出.tar.gz
+install.packages('~/desktop/a/', repos=NULL, type='source')
+
+Rscript -e "install.packages(\"png\", repos = \"https://cloud.r-project.org\")" 上面例子

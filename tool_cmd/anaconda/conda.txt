@@ -1,0 +1,36 @@
+conda install -c bioconda fastqc 安装软件
+
+conda env list
+
+conda remove --name ENV_NAME --all
+
+conda config --show channels #show 镜像源
+
+conda create -n ENV_NAME python=3.9
+
+conda activate ENV_NAME
+
+conda deactivate
+
+#conda set mirror
+conda config --remove channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+
+conda config --remove channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
+
+conda config --remove channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+
+conda config --remove channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
+
+conda config --remove channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+
+#pip upgrade
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+
+#pip set mirror
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
+
+
+
+

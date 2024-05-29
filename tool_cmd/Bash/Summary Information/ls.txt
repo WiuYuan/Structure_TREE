@@ -1,0 +1,4 @@
+ls *.fq
+
+ls -l Mus_musculus.GRCm38.75_chr1.bed 输出中有bytes大小
+ls -lh Mus_musculus.GRCm38.75_chr1.bed 输出用M或者G等可以human readable

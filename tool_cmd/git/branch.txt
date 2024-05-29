@@ -1,0 +1,15 @@
+git branch readme-changes
+
+git branch
+
+git checkout readme-changes
+
+git branch --all 可以看到remote branch
+
+git fetch origin 可以看到最新的remote branch
+
+git push origin b2 可以将自己的工作推到remote branch
+
+git merge origin/b2 可以将remote branch b2与现在的local branch合并
+
+git checkout -b b2 origin/b2 直接将remote branch拉过来并且进入

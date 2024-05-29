@@ -1,0 +1,5 @@
+sort(table(reps$repClass), decreasing=TRUE)[1:5]
+
+order(z) 输出排序后的数组下标，升序
+
+z[order(z, decreasing=TRUE)] 降序

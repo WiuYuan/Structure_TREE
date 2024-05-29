@@ -1,0 +1,35 @@
+sessionInfo() 输出R版本信息
+
+help(log)
+?log
+
+ls() 查看R中存储的所有变量名
+
+rm(tmp) 删除R中存储的数据
+
+seq(3, 5)
+1:5
+
+b <- c(a=3.4, b=5.4, c=0.4)
+names(b) <- c("x", "y", "z")
+
+z[c(-4, -5)]
+
+v[c(TRUE, TRUE, FALSE, TRUE, FALSE, FALSE)] #only true out
+
+c(1L, -3L, 4L)
+is.integer()
+as.integer()
+typeof(z)
+
+a[NA] 返回NA
+
+ll_means <- numeric(length(ll)) 创建全0数组
+
+scale(x) 对向量归一化
+
+basename(x) 提取出单纯文件名
+
+setwd("~/desktop") getwd()
+
+brew install --cask rstudio 下载rstudio和更新

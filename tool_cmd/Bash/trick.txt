@@ -1,0 +1,7 @@
+(zgrep "^#" Mus_musculus.GRCm38.75_chr1.gtf.gz; \ zgrep -v "^#" Mus_musculus.GRCm38.75_chr1.gtf.gz | \ sort -k1,1 -k4,4n) | less
+
+program --in1 <(makein raw1.txt) --in2 <(makein raw2.txt) \
+       --out1 out1.txt --out2 out2.txt
+
+program --in1 in1.txt --in2 in2.txt \
+       --out1 >(gzip > out1.txt.gz) --out2 >(gzip > out2.txt.gz)

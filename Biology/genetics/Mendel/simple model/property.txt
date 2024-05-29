@@ -1,0 +1,2 @@
+Law of Segregation:
+The two alleles for each trait separate (segregate) during gamete formation, and then unite at random, one from each parent, at fertilization.

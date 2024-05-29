@@ -1,0 +1,1 @@
+seq 3 > nums.txt 将1\n2\n3\n输出

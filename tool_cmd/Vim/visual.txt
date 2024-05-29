@@ -1,0 +1,18 @@
+v 进入visual mode, 可以左右选择
+V 选择整行
+ctrl + v 选择列
+
+d 删除选中部分, delete
+D 删除从这个字符之后所有这行字符
+dd 删除整行
+
+c 删除选中部分并进入insert
+cc 删除整行, 但保留行, 并且进入insert
+
+y 复制选中部分, yank(copy)
+Y 复制整行
+yy 复制整行, 和Y相同
+
+p 粘贴复制部分在光标之后, paste
+P 粘贴在光标之前
+r 再写一个字符覆盖光标, replace

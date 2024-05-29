@@ -1,0 +1,19 @@
+install.packages("dplyr")
+library(dplyr)
+
+d_df <- tbl_df(d) 不改变数据，但在输出查看的时候只输出前面几行方便查看
+select(d, start, end, Pi, Recombination, depth) 返回这些列对应的数据框
+select(d_df, -(start:cent)) 返回除了start,...,cent之外列的数据框
+filter(d_df, Pi > 16, percent.GC > 80) 只剩满足条件的列
+arrange(d_df, depth) 按照depth从小到大排序
+arrange(d_df, desc(total.SNPs), desc(depth)) 从大到小
+d_df <- mutate(d_df, diversity = Pi/(10*1000)) 加入新的列
+
+d_df %>% mutate(GC.scaled = scale(percent.GC)) %>% 
+	 filter(GC.scaled > 4, depth > 4) %>%
+         select(start, end, depth, GC.scaled, percent.GC) %>%
+         arrange(desc(depth))
+
+mtfs_df %>% group_by(chr) %>%
+         summarize(max_recom = max(recom), mean_recom = mean(recom), num=n())
+这里所有操作按照分组进行，但分组不会改变数据

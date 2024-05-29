@@ -1,0 +1,1 @@
+touch zmays{A,C}_R{1,2}-temp.fastq

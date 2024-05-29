@@ -1,0 +1,16 @@
+xargs works by taking input from standard in and splitting it by spaces, tabs, and newlines into arguments, 注意xargs是将文件分割开变成输入文件名
+
+find . -name "*-temp.fastq" | xargs rm 注意不能交互，即rm -i无用
+rm ./zmaysA_R1-temp.fastq ./zmaysA_R2-temp.fastq \
+./zmaysC_R1-temp.fastq ./zmaysC_R2-temp.fastq 上述命令实际执行情况
+find . -name "*-temp.fastq" | xargs -n 1 rm 可以将上述1个rm变成分别执行4次rm
+
+cat files-to-delete.txt | xargs rm
+
+find . -name "*.fastq" | xargs basename -s ".fastq" | \
+xargs -I{} fastq_stat --in {}.fastq --out ../summaries/{}.txt 注意{}为引流字符代替位置
+
+find . -name "*.fastq" | xargs basename -s ".fastq" | \
+xargs -P 6 -I{} fastq_stat --in {}.fastq --out ../summaries/{}.txt 其中-P表示最多可以同时进行6个进程
+
+GNU Parallel更强大

@@ -1,0 +1,200 @@
+---
+title: "DESeq2 Analysis"
+author: "苑闻"
+output: html_document
+date: "2024-05-26"
+---
+
+## 1. 基本R包的介绍, 安装与导入
+
+### 1.1 介绍
+
+#### 1.1.1 DESeq2
+
+DESeq2是一个用于RNA测序数据（RNA-seq）差异表达分析的R包。它提供了一套用于处理计数数据（例如，来自RNA-seq实验的数据）的统计方法，可以用于检测基因表达水平在不同条件下的变化。DESeq2特别适用于处理具有复杂实验设计的数据集，例如多组样本、重复实验和多种处理条件。
+
+主要特点如下
+
+(a) 模型拟合：DESeq2使用负二项分布模型来拟合RNA-seq数据的计数数据，这可以有效地处理数据中的过离散现象。
+
+(b) 标准化：它提供了一种基于库大小的标准化方法，用于调整不同样本之间的测序深度差异。
+
+(c) 差异表达分析：通过比较不同条件下的基因表达水平，DESeq2可以识别差异表达的基因。
+
+(d) 多重测试校正：它提供了对多重假设检验进行校正的方法，以控制假阳性率。
+
+(e) 灵活的实验设计：DESeq2支持复杂的实验设计，包括因子、协变量和样本分组。
+
+(f) 可视化工具：提供了多种可视化工具，如MA图、火山图等，帮助用户直观地理解数据和结果。
+
+(g) 可扩展性：DESeq2可以与其它R包结合使用，如ggplot2用于数据可视化，limma用于更高级的统计分析。
+
+#### 1.1.2 biomaRt
+
+biomaRt 是一个R包，它提供了一个接口来访问BioMart数据库，例如著名的Ensembl数据库。BioMart是一个用于生物数据的查询和检索的系统，它允许用户以统一的方式检索大量的数据，而无需了解底层的数据库架构或编写复杂的SQL查询。biomaRt包使得用户能够直接访问多种数据类型，从基因注释到数据库挖掘，执行强大的在线查询。
+
+我们在这里主要使用其转化基因id为基因名
+
+#### 1.1.3 ggplot2
+
+这个包就不用过多介绍了
+
+#### 1.1.4 EnhancedVolcano
+
+EnhancedVolcano 是一个用于生成火山图（Volcano Plot）的R包，它提供了一种高度可配置的方式来可视化差异表达分析的结果。火山图是一种展示基因表达差异的分布的图形，通常横轴表示对数变化倍数（Log2 Fold Change，即处理组与对照组的平均表达水平的比值的对数），纵轴表示负对数p值（-Log10(P.Value)），表示统计显著性。
+
+我们在这里主要使用其绘制火山图, 找寻并可视化表达显著差异的基因
+
+### 1.2 安装
+
+这里介绍两种方法来完美配置好相关的R包
+
+#### 1.2.1 方法1
+
+我们使用BiocManager来辅助我们安装相应生物信息学的R包
+
+```{r package install}
+if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager")
+}
+# 下面一行如果要安装就删除注释‘#’
+# BiocManager::install(c("DESeq2", "biomaRt", "EnhancedVolcano"))
+```
+
+#### 1.2.2 方法2
+
+很多时候因为R版本问题, 电脑配置问题, R包版本不匹配问题等, 导致我们在安装R包等时候总是报错, 在这里我推荐一种一劳永逸的办法, 我们使用Docker, 利用别人已经配置好的R包系统(Image), 使用docker创建小型虚拟机(Container), 来构建我们的系统
+
+因为虚拟机相对隔离, 我们使用Rstudio就不再方便, 故而可以采用Vscode + R extension + Radian + Dev Containers Extension的方法来操作我们的R代码(当然依然可以使用Rstudio)
+
+这里给出详细教程 [vscode-r-github](https://github.com/RamiKrispin/vscode-r)
+
+如果你是mac电脑, 或者在安装相应Image的时候提示不稳定, 可能导致上面方法失败, 这个时候可以下载Bioconductor的官方Image, 然后按照1.2.1来安装包, 可以最大程度避免版本不相容问题
+
+### 1.3 导入
+
+```{r package induct}
+# suppressPackageStartupMessages()函数关闭载入R包时的提示信息
+suppressPackageStartupMessages(library(DESeq2))
+library(biomaRt)
+library(ggplot2)
+suppressPackageStartupMessages(library(EnhancedVolcano))
+```
+
+## 2. RNA-seq数据读取与转换为DESeq2能够读取的格式
+
+### 2.1 RNA-seq数据读取
+
+我们读取TCGA-LIHC.htseq_counts.tsv中的RNA-seq测量数据, 并且完成下面3件事情
+
+(a) 按照网站要求转化数据 x -> 2^x - 1
+
+(b) 删除最后5行数据 (这是对RNA-seq数据的总结, 无需在DESeq分析中使用)
+
+(c) 完全转换行名为gene_id格式
+
+```{r RNA-seq read}
+cts <- as.matrix(read.csv("TCGA-LIHC.htseq_counts.tsv", sep = "\t", row.names = "Ensembl_ID")) # RNA-seq数据读取
+cts <- round(2^cts - 1) # 完成(a)
+cts <- cts[c(1:(nrow(cts) - 5)), ] # 完成(b)
+rownames(cts) <- substring(rownames(cts), 1, 15) # 完成(c)
+```
+
+### 2.2 使用biomaRt转换基因id为基因名, 方便后续查阅
+
+我们借助bioMaRt的hsapiens_gene_ensembl和ensembl库, 完成以下3件事情
+
+(a) 导入上述两个数据库
+
+(b) 找寻我们数据中gene_id对应的基因名
+
+(c) 保留不能查找到的gene_id, 转换原数据行名为gene名
+
+```{r biomaRt}
+mart <- useMart("ensembl", "hsapiens_gene_ensembl") # 完成(a)
+symbols <- getBM(attributes = c("external_gene_name", "ensembl_gene_id"), filters = "ensembl_gene_id", mart = mart, values = rownames(cts)) # 完成(b)
+rownames(cts) <- ifelse(rownames(cts) %in% symbols$ensembl_gene_id, symbols$external_gene_name, rownames(cts)) # 完成(c)
+```
+
+### 2.3 生成DESeq分析中的读入数据
+
+根据数据信息, 读取每个样本的编码(14和15位字符), 转换为两种不同类型(有肿瘤的tumor和无肿瘤的normal)
+
+```{r generate DESeq2 data}
+coldata <- data.frame(row.names = colnames(cts)) # 创建DESeq2分析需要的额外数据
+coldata$"tcga_id" <- rownames(coldata) # 记录每个样本的编号
+coldata$"code" <- substring(coldata$"tcga_id", 14, 15) # 转换为官方编号
+coldata$"type" <- ifelse(coldata$code == "01", "tumor", "normal") # 转换为tumor和normal, 01表示不在前两类之中(数据中其实没有标记为这个的)
+coldata$type <- factor(coldata$type) # 转换数列为factor(更利于DESeq2分析)
+```
+
+## 3. DESeq数据读入与分析
+
+### 3.1 数据读入
+
+```{r DESeq2 data read}
+dds <- DESeqDataSetFromMatrix(
+    countData = cts, # 原数据
+    colData = coldata, # 额外分类数据
+    design = ~type # 分类标签, 用于fold change比较
+)
+```
+
+### 3.2 数据预处理
+
+#### 3.2.1 预过滤(Pre-filtering)
+
+```{r Pre-filtering}
+smallestGroupSize <- 3 # 设置最小阀值
+keep <- rowSums(counts(dds) >= 10) >= smallestGroupSize # 读取大于最小阀值的数据
+dds <- dds[keep, ] # 清除不满足要求的基因, 为下一步标准化做准备
+```
+
+#### 3.2.2 标准化
+
+```{r Normalization}
+dds <- DESeq(dds) # 标准化
+```
+
+### 3.3 结果生成
+
+```{r DESeq2 result}
+res <- results(dds) # 生成结果
+```
+
+## 4. 结果可视化
+
+### 4.1 单基因图
+
+我们选择最小的pvalue的基因, 展示其folder_change
+
+```{r single gene}
+plotCounts(dds, gene = which.min(res$padj), intgroup = "type")
+```
+
+可以看出确实有显著性差异, 以下为此基因的介绍:
+
+SHKBP1 gene，全称为SH3KBP1 binding protein 1，是一个编码蛋白质的基因。该基因涉及的生物途径包括Rho GTPases信号传导和RAC1 GTPase等.[4]
+
+通过查资料显示，SHKBP1基因敲除的小鼠模型中，肺部肿瘤的数量显著减少。实验结果表明，SHKBP1基因表达水平的降低可以显著抑制肺癌细胞的迁移和侵袭，而其过表达则促进了这些细胞的迁移和侵袭，表明SHKBP1与肿瘤迁移和侵袭密切相关。免疫组化（IHC）分析组织微阵列也显示SHKBP1与淋巴转移相关.[1]
+
+在细胞层面，SHKBP1基因与多种免疫细胞有关，包括B细胞、树突状细胞、粒细胞、单核细胞、自然杀伤（NK）细胞和T细胞。此外，SHKBP1基因在细胞内的表达和功能也表现出一定的特异性，例如在某些细胞类型中表达较高，而在其他细胞类型中表达较低或未检测到.[2]
+
+在癌症基因组项目（COSMIC）数据库中，SHKBP1基因的突变情况也被记录，包括在不同癌症样本中的突变类型和分布。这些信息有助于我们更好地理解SHKBP1基因在癌症发展中的作用.[3]
+
+### 4.2 火山图
+
+```{r volcano}
+EnhancedVolcano(res,
+    lab = rownames(res),
+    x = "log2FoldChange",
+    y = "pvalue"
+)
+```
+
+### 4.3 基因资料参考文献
+
+1. [Liu Q, Li H, Yang M, Mei Y, Niu T, Zhou Z, Zhang X, He X, Wang L, Li J. Suppression of tumor growth and metastasis in Shkbp1 knockout mice. Cancer Gene Ther. 2022 Jun;29(6):709-721. doi: 10.1038/s41417-021-00349-x. Epub 2021 Jun 10. PMID: 34112919.](https://www.nature.com/articles/s41417-021-00349-x)
+2. <https://www.proteinatlas.org/ENSG00000160410-SHKBP1>
+3. <https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=SHKBP1>
+4. <https://www.genecards.org/cgi-bin/carddisp.pl?gene=SHKBP1>

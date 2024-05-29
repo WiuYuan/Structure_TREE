@@ -1,0 +1,2 @@
+model <- lm(y~x, data = df) #线性回归
+predict(model, newdata = data.frame(x = 12)) #预测

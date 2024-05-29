@@ -1,0 +1,21 @@
+plot(df$x, df$y, main = "散点图", xlab = "x", ylab = "y") #散点图
+
+#线性回归图
+plot(y ~ x, data = df, main = "Linear Regression")
+abline(model, col = "red")
+
+#点标记
+text(df$x, df$y, labels = labels, cex = 0.8, col = "red"， pch = 1) #数据框
+text(x, y, labels, …) #单点
+
+#单点加入图，plot必须重新开一张图，但points可以在原有的图上加点
+points() #其余同上
+
+#boxplot
+d = data$WBC
+d1 = d[2:8]
+d1 = as.numeric(d1)
+d2 = d[9:14]
+d2 = as.numeric(d2)
+boxplot(d1, d2, xlab = NULL, range = 0, outline = FALSE)
+axis(1, at = c(1, 2), labels = c("Control", "KO"), title("WBC"))

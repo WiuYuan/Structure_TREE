@@ -1,0 +1,1 @@
+hexdump -c improper.fa 返回字符的16进制值

@@ -1,0 +1,3 @@
+wc samples.txt 输出行数-1，空格隔开的words，字符数，以及输入文件（输入什么输出什么）
+wc -l Mus_musculus.GRCm38.75_chr1.bed 只输出lines
+wc -m 只输出字符个数

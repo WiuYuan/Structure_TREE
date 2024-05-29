@@ -1,0 +1,11 @@
+lapply(ll, mean) 对所有list下的名称变量求mean，返回list
+
+lapply(ll, mean, na.rm=TRUE) 忽略NA项，不是当作0处理
+
+sapply(ll, function(x) mean(x, na.rm=TRUE)) 同上但返回vector，包含name
+
+mapply(function(a, b) length(intersect(a, b)), ind_1, ind_2) 返回vector，但可以处理多个变量函数
+
+tapply(d$depth, d$GC.binned, mean) 结合split和lapply
+
+aggregate(d$depth, list(gc=d$GC.binned), mean) 基本同上

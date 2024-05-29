@@ -1,0 +1,2 @@
+pigment molecules are part of a core complex around the reaction center. Others form light-harvesting complexes (LHCs) around the periphery of the core complex.
+each monomer of the trimeric light-harvesting complex LHCII contains seven molecules of chlorophyll a, five of chlorophyll b, and two of lutein.

@@ -1,0 +1,3 @@
+similar to phosphohexose isomerase steps 2-4
+CH2OH-CO-CH2OPO3(2-) ->()-> CHO-CH2O-CH2OPO3(2-)
+dihydroxyacetone phosphate ->()-> glyceraldehyde 3-phosphate

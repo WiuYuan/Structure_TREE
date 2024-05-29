@@ -1,0 +1,8 @@
+mtfs$pos <- paste(mtfs$chr, mtfs$motif_start, sep="-") 第一个数组每一项+‘-’+第二个数组对应项
+
+recm <- merge(mtfs, rpts, by.x="pos", by.y="pos") 
+合并by.x和by.y的match项（从mtfs的每一项加上rpts的match项，相同列名chr->chr.{xy}，并且按pos排序
+
+recm <- merge(mtfs, rpts, by.x="pos", by.y="pos", all.x=TRUE) 所有无法与rpts匹配的用NA代替\
+
+d_split <- split(d$depth, d$GC.binned) 用bin后的factor进行分类，返回list

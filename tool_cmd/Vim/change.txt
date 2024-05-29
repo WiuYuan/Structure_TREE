@@ -1,0 +1,4 @@
+c 删除选中部分并进入insert
+cc 删除整行, 但保留行, 并且进入insert
+ciw 删除所在单词并进入insert, change inner word
+ci" abc"edf"ghi变成abcghi 

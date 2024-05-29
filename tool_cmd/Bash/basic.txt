@@ -1,0 +1,28 @@
+if [] 如果是命令行，返回0当作返回1, test正确与否即位返回值，转换同前（正确返回0）
+then
+  []
+else
+  []
+fi
+
+echo "$?" : print the exit status
+
+-lt : <=
+-le : >=
+-eq : ==
+-ne : !=
+-lt : <
+-gt : >
+-o : OR
+-a : AND
+! : negative
+
+if test可以换成if []
+
+sample_names=(zmaysA zmaysB zmaysC)
+${sample_names[@]} 全部
+${#sample_names[@]} 数组大小
+${!sample_names[@]} # 0 1 2
+
+for fastq_file in ${sample_files[@]}; do
+done

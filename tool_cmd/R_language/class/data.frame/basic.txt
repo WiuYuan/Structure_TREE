@@ -1,0 +1,27 @@
+# 使用colnames函数获取数据框的所有列名
+colnames(df)
+# 将第一列的列名改为name（可以为NULL）
+colnames(df)[1] <- "name"
+# 删除第一列
+df <- df[, -1]
+# 创建data.frame
+df <- data.frame(x = c(), y = c())
+#求mean
+apply(Y1, 1, mean)
+#转换
+mat = as.matrix(data)
+mat = type.convert(mat)
+d1 = as.character(d1) 将一行的dataframe转换成vector, 如果是数字用as.numeric
+#basic
+nrow(d) ncol(d) dim(d)
+mean(d$depth) summary(d$depth) table(d$cent)
+d[, c("start", "end")] d[ , 1:2]
+#如果不设置，此为vector，现在是dataframe
+d[, "start", drop=FALSE] 
+# 前四行满足性质
+which(d$Pi > 10)[1:4]
+#最大最小行
+which.min(d$total.Bases) which.max(d$depth)
+#子集
+subset(d, Pi > 16 & percent.GC > 80)
+subset(d, Pi > 16 & percent.GC > 80, c(start, end, Pi, percent.GC, depth))

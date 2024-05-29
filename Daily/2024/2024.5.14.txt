@@ -1,0 +1,6 @@
+10:00-11:00 probability + homework + model
+11:00-12:00 English words
+13:00-17:00 optimization + bioinformatics 
+18:00-19:00 English words
+19:00-20:00 mass + optimization model
+remark: 采用克制域对抗睡眠, 今天应该已经补完了前面缺失睡眠

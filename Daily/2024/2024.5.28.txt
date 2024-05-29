@@ -1,0 +1,6 @@
+10:00-11:00 Probability homework
+11:00-12:00 English words
+13:00-17:00 bioinformatics
+18:30-19:30 genetics
+19:30-20:30 English words
+remark: 

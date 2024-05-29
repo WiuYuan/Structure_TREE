@@ -1,0 +1,2 @@
+\newcommand{\system}{Hashflow} 输入\system便替换为Hashflow
+\newcommand{\highlight}[1]{\textbf{#1}} 输入\highlight{abc}便替换为\textbf{abc}

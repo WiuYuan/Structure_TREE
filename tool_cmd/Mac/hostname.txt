@@ -1,0 +1,4 @@
+sudo hostname yuanwen
+sudo scutil --set LocalHostName $(hostname)
+sudo scutil --set HostName $(hostname)
+改变主机名（莫名其妙改成bogon）

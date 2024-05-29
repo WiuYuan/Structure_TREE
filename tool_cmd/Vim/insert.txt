@@ -1,0 +1,6 @@
+i 光标之前insert
+a 光标之后append
+o 新建下面一行open
+I 到达最前面
+A 到达最后面
+O 新建上面一行

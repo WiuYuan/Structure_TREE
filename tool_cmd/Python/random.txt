@@ -1,0 +1,5 @@
+random.randint(a, b) 随机取a, a+1, ..., b中数
+
+A[np.random.choice(A.shape[0], size=4, replace=False), :] 二维数组随机取4行
+
+random.shuffle(data) 随机打乱（注意：这个只能对list数组，np.array不行（会出bug），需要用np.random.shuffle）

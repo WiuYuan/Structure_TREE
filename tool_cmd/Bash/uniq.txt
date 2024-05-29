@@ -1,0 +1,5 @@
+sample_names=($(cut -f 1 "$sample_info" | uniq)) 相同行消除
+uniq letters.txt 只能消除连续相同行
+sort letters.txt | uniq
+uniq -c letters.txt 每行显示counts of occurrences
+uniq -d mm_gene_names.txt 判断相邻行是否有相同，有exit 0

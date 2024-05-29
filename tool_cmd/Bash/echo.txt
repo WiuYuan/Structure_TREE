@@ -1,0 +1,2 @@
+echo a" > a.txt 重新写入
+echo a" >> a.txt 在最后一行加上

@@ -1,0 +1,1 @@
+Glucose + 2ATP + 4ADP + 2NAD(+) + 2Pi -> 2pyruvate + 4ATP + 2NADH + 2H(+) + 2H2O + 2ADP

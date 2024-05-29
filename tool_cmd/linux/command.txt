@@ -1,0 +1,3 @@
+cd file_name 去往下一级路径
+cd .. 返回上一级目录
+sz file_name 下载文件

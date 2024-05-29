@@ -1,0 +1,1 @@
+Lemma1, we have new null set, from the proof from infinite to a.e.finite

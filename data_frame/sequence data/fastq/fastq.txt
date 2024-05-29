@@ -1,0 +1,7 @@
+后缀名可以是.fq或者.fastq
+fastq文件一般小于4行，第一行为序列信息，第二行为seq具体内容，N表示荧光干扰无法判断, 第四行quality data
+
+1 The description line, beginning with @. This contains the record identifier and other information.
+2 Sequence data, which can be on one or many lines.
+3 The line beginning with +, following the sequence line(s) indicates the end of the sequence. In older FASTQ files, it was common to repeat the description line here, but this is redundant and leads to unnecessarily large FASTQ files.
+4 The quality data, which can also be on one or many lines, but must be the same length as the sequence. Each numeric base quality is encoded with ASCII charac‐ ters using a scheme we’ll discuss later (“Base Qualities” on page 344).

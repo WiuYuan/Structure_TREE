@@ -1,0 +1,17 @@
+grep Olfr Mus_musculus.GRCm38.75_chr1_genes.txt | grep -v Olfr1413
+grep -v -w bioinfo example.txt 其中-w表示必须为“ bioinfo "
+-B1 多输出前面一行, -A2 后面2行, -C3 前后各三行
+
+grep "Olfr141[13]" Mus_musculus.GRCm38.75_chr1_genes.txt 1和3都可以
+grep -E "(Olfr1413|Olfr1411)" Mus_musculus.GRCm38.75_chr1_genes.txt 同前
+
+grep -c "\tOlfr" Mus_musculus.GRCm38.75_chr1_genes.txt 计数多少行
+
+grep -c 'gene_biotype "snRNA"' Mus_musculus.GRCm38.75_chr1.gtf
+
+grep -o "Olfr.*" Mus_musculus.GRCm38.75_chr1_genes.txt | head -n 3 一旦找到就不去搜索其余
+
+grep -E -o 'gene_id "\w+"' Mus_musculus.GRCm38.75_chr1.gtf | head -n 5
+其中\w+可以换成(\w+)
+
+grep -o 匹配所有字符，而不是有字符的行

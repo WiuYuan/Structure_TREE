@@ -1,0 +1,7 @@
+Host BioInfoClass
+    HostName 162.105.160.16
+    User bjx050_pkuhpc
+    Port 16822
+    IdentityFile ~/PekingHPCsshkey.txt
+
+# 在cmd+shift+P中输入Remote-SSH, 进入.ssh/config, 按上面的修改即可

@@ -1,0 +1,2 @@
+ctrl+option+N #code runner运行
+option+shift+F #shell format格式化

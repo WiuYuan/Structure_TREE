@@ -1,0 +1,3 @@
+man ascii 可以查看ASCII码，按q退出
+man gawk
+man brew

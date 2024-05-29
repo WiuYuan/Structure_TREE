@@ -1,0 +1,8 @@
+git checkout -- README.md 从HEAD恢复文件
+
+git log --pretty=oneline --abbrev-commit -n 3 查看最近修改
+20041ab resolved merge conflict in README.md 
+08ccd3b added reference download date
+dafce75 added ref genome download date and link
+
+git checkout 08ccd3b -- README.md 恢复任意版本

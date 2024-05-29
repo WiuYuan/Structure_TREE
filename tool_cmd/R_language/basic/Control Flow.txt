@@ -1,0 +1,20 @@
+if (x == some_value) {
+            # do some stuff in here
+} else {
+            # else is optional
+}
+for (element in some_vector) {
+            # iteration happens here
+}
+while (something_is_true) {
+            # do some stuff
+}
+for (i in 1:length(vec)) { 注意如果length为0，返回1，0
+# do something
+}
+下面方法更安全
+vec <- rnorm(3)
+seq_along(vec) 返回1 2 3
+seq_along(numeric(0)) #numeric(0) returns an empty numeric vector 这里返回0
+
+ifelse(x < 0, -1, 1) 对x数组操作ifelse(test, yes, no)

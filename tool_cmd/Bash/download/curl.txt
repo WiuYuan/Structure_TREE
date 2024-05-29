@@ -1,0 +1,2 @@
+FASTA_FILE_LINK=http://bit.ly/egfr_flank
+curl -L $(FASTA_FILE_LINK) > egfr_flank.fa

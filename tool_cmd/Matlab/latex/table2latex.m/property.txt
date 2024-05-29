@@ -1,0 +1,1 @@
+table2latex(T, file) 输入table和file(要求为*.tex), 输出latex的table到file中

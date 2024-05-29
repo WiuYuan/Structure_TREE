@@ -1,0 +1,7 @@
+\fontsize{10.5pt}{12.6pt}\selectfont 字号10.5行距12.6,对于中文行距无用
+
+\newfontfamily\STfont{STSong}[AutoFakeBold=2.5]设置伪加粗
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\STfont{STSong}[AutoFakeBold=2.5]设置主要字体以及其它字体,注意一定要在mac fontBook中存在

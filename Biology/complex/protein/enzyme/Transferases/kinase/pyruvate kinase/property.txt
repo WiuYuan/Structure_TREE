@@ -1,0 +1,2 @@
+requires K+ and either Mg2+ or Mn2+
+(CH2=COPO3(2-)-COO(-))(Phosphoenolpyruvate)(PEP) + ADP ->(Mg2+)(K+)()-> Pyruvate + ATP

@@ -1,0 +1,8 @@
+11:30-12:30 electrodynamics
+13:30-14:30 molecular
+14:30-15:30 bioinformatics 
+15:30-16:30 cell fate
+18:30-19:30 electrodynamics
+19:30-20:30 molecular
+20:30-21:30 bioinformatics 
++急迫buffremark: 物理补充建模很麻烦

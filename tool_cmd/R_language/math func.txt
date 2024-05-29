@@ -1,0 +1,2 @@
+qnorm(p, mu, sd) sd标准差，从概率p计算x,使得P(X<=x)=p
+pnorm(x, mu, sd) sd标准差，从x计算概率p,使得P(X<=x)=p

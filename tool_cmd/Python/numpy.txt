@@ -1,0 +1,15 @@
+np.linalg.norm(x, ord = 2) 计算ord范数， 可以是np.inf
+
+np.sum(a, axis=0) 每列和； np.sum(a, axis=1) 每行和
+
+np.zeros([m, n])
+
+a.T 表示转置（a.transpose()对向量好像不可行，只能对矩阵求转置）
+
+np.dot(A, b) or np.inner(A, b) 矩阵乘向量
+
+np.expand_dims(gamma,1).repeat(m,axis=1) 扩展向量为矩阵，1表示列向量扩充，0则是行向量扩充
+
+np.random.rand(3,2) 随机3*2矩阵
+
+np.arange(0.0001, 0.001, 0.0001) [0.0001, 0.0009]
